@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class HomeController {
 
-    @RequestMapping("/hello")
-    @ResponseBody
+    @RequestMapping(value = "/hello")
+//    @ResponseBody
     public String home() {
         return "helloThymeleaf";
     }
