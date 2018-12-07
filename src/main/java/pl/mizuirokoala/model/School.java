@@ -29,25 +29,3 @@ public class School {
     //next teacher,subject and constructor
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
