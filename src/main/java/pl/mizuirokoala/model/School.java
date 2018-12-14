@@ -20,7 +20,7 @@ public class School {
 
     private String type;
 
-    @OneToMany(mappedBy = "school",cascade = {CascadeType.PERSIST,CascadeType.MERGE})
+    @OneToMany(mappedBy = "school")
     private List<Division> subject=new ArrayList<>();
 
     @OneToMany(mappedBy = "school")

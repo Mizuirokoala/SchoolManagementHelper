@@ -11,10 +11,10 @@ public class Student {
     @Id
     private long id;
 
-    @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @ManyToMany
     private List<Division> divisions = new ArrayList<>();
 
-    @OneToMany(mappedBy = "students", cascade = {CascadeType.PERSIST, CascadeType.MERGE}, fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "students")
     List<Mark> marks = new ArrayList<>();
 
     @ManyToMany
