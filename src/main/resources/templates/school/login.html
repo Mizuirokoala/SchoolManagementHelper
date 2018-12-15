@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--simple way to use TH in login-->
+<div >
+    <form role="form" th:action="@{/login}" method="post">
+        <fieldset>
+            <div >
+                <input  placeholder="E-mail" name="username" type="text" autofocus>
+            </div>
+            <div >
+                <input  placeholder="Password" name="password" type="password">
+            </div>
+            <div >
+                <label>
+                    <input name="remember" type="checkbox" value="Remember Me">Remember Me
+                </label>
+            </div>
+            <!-- Change this to a button or input when using this as a form -->
+            <button >Login</button>
+        </fieldset>
+    </form>
+</div>
+</body>
+</html>
