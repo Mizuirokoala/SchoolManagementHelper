@@ -11,8 +11,6 @@ public class Student {
     @Id
     private long id;
 
-    @ManyToMany
-    private List<Division> divisions = new ArrayList<>();
 
     @OneToMany(mappedBy = "students")
     List<Mark> marks = new ArrayList<>();
@@ -20,4 +18,20 @@ public class Student {
     @ManyToMany
     private String school;
 
+    @ManyToOne
+    @JoinColumn(name = "division_id")
+    private Division division;
+
+//    @ManyToMany
+//    private List<Division> divisions = new ArrayList<>();
+
+    @OneToMany(mappedBy = "student", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    List<Mark> mark = new ArrayList<>();
+
+
+    public Student() {
+        super();
     }
+
+//and next konst..
+}
